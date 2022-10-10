@@ -1,0 +1,2 @@
+class DidIt < ApplicationRecord
+end
