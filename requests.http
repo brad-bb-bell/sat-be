@@ -1,0 +1,44 @@
+######################################
+### Activity Index
+GET http://localhost:3000/activities.json
+
+### Activity Show
+GET http://localhost:3000/activities/1.json
+
+### Activity Create
+POST http://localhost:3000/activities.json
+Content-Type: application/json
+
+{
+  "name": "climb in gym"
+}
+
+### Activity Update
+PATCH http://localhost:3000/activities/1.json
+Content-Type: application/json
+
+### Activity Destroy
+DELETE http://localhost:3000/activities/1.json
+
+######################################
+### Did_It Index
+GET http://localhost:3000/did_its.json
+
+### Did_It Create
+POST http://localhost:3000/did_its.json
+Content-Type: application/json
+
+### Did_It Destroy
+DELETE http://localhost:3000/did_its/1.json
+
+######################################
+### User Create
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+### User Update
+PATCH http://localhost:3000/users/1.json
+Content-Type: application/json
+
+### User destroy
+DELETE http://localhost:3000/users/1.json
