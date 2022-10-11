@@ -1,4 +1,6 @@
 class DidItsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def index
     did_its = DidIt.all
     render json: did_its.as_json
@@ -11,7 +13,11 @@ class DidItsController < ApplicationController
       date: params["date"],
     )
     did_it.save
-    render json: did_it.as_json
+    if did_it.save
+      render json: { new_did_it: did_it.as_json }
+    else
+      render json: { errors: did_it.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
 end

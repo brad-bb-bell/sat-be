@@ -1,4 +1,5 @@
 class ActivitiesController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
   def index
     @activities = Activity.all
@@ -16,8 +17,9 @@ class ActivitiesController < ApplicationController
       name: params["name"],
     )
     if activity.save
-      render json: { activity: activity.as_json }
-    else render json: { errors: activity.errors.full_messages }, status: :unprocessable_entity
+      render json: { new_activity: activity.as_json }
+    else
+      render json: { errors: activity.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -32,7 +34,7 @@ class ActivitiesController < ApplicationController
   end
 
   def destroy
-    activity = Activity.find_by(params[:id])
+    activity = Activity.find_by(id: params[:id])
     activity.destroy
     render json: { message: "Activity has been removed" }
   end
