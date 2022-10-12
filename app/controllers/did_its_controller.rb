@@ -12,8 +12,11 @@ class DidItsController < ApplicationController
       activity_id: params["activity_id"],
       date: params["date"],
     )
-    did_it.save
-    render json: did_it.as_json
+    if did_it.save
+      render json: did_it.as_json
+    else
+      render json: { errors: did_it.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy

@@ -39,16 +39,25 @@ Content-Type: application/json
 }
 
 ### Did_It Destroy
-DELETE http://localhost:3000/did_its/15.json
+DELETE http://localhost:3000/did_its/16.json
 
 ######################################
 ### User Create
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
+{
+  "name": "BB",
+  "email": "brad.bb.bell@gmail.com"
+}
+
 ### User Update
-PATCH http://localhost:3000/users/1.json
+PATCH http://localhost:3000/users/5.json
 Content-Type: application/json
 
+{
+  "name": "BallinBB"
+}
+
 ### User destroy
-DELETE http://localhost:3000/users/1.json
+DELETE http://localhost:3000/users/5.json

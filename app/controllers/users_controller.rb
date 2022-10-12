@@ -2,12 +2,12 @@ class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
   
   def create
-    user = User.new!(
+    user = User.create!(
       name: params[:name],
       email: params[:email],
     )
     if user.save
-      render json: { message: "User created successfully" }, status: :created
+      render json: user.as_json
     else
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     user.name = params["name"] || user.name
     user.email = params["email"] || user.email
     if user.save
-      render template: "users/show"
+      render json: user.as_json
     else
       render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end

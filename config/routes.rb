@@ -15,6 +15,6 @@ delete "/activities/:id" => "activities#destroy"
 ###Did_It routes
 get "/did_its" => "did_its#index"
 post "/did_its" => "did_its#create"
-delete "/did_its" => "did_its#destroy"
+delete "/did_its/:id" => "did_its#destroy"
 
 end
