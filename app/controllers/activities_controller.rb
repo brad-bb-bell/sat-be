@@ -2,14 +2,13 @@ class ActivitiesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @activities = Activity.all
-    # render template: "products/index"
-    render json: { activities: @activities.as_json }
+    activities = Activity.all
+    render json: activities.as_json
   end
 
   def show
-    @activity = Activity.find_by(id: params["id"])
-    render json: { activities: @activity.as_json }
+    activity = Activity.find_by(id: params["id"])
+    render json: activity.as_json
   end
 
   def create
@@ -17,7 +16,7 @@ class ActivitiesController < ApplicationController
       name: params["name"],
     )
     if activity.save
-      render json: { new_activity: activity.as_json }
+      render json: activity.as_json
     else
       render json: { errors: activity.errors.full_messages }, status: :unprocessable_entity
     end
@@ -27,7 +26,7 @@ class ActivitiesController < ApplicationController
     activity = Activity.find_by(id: params["id"])
     activity.name = params["name"] || activity.name
     if activity.save
-      render json: { activity: activity.as_json }
+      render json: activity.as_json
     else
       render json: { errors: activity.errors.full_messages }, status: :unprocessable_entity
     end

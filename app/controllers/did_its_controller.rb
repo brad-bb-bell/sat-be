@@ -13,11 +13,13 @@ class DidItsController < ApplicationController
       date: params["date"],
     )
     did_it.save
-    if did_it.save
-      render json: { new_did_it: did_it.as_json }
-    else
-      render json: { errors: did_it.errors.full_messages }, status: :unprocessable_entity
-    end
+    render json: did_it.as_json
+  end
+
+  def destroy
+    did_it = DidIt.find_by(id: params[:id])
+    did_it.destroy
+    render json: { message: "Did_It has been deleted"}
   end
 
 end

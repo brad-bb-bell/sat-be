@@ -3,7 +3,7 @@
 GET http://localhost:3000/activities.json
 
 ### Activity Show
-GET http://localhost:3000/activities/2.json
+GET http://localhost:3000/activities/4.json
 
 ### Activity Create
 POST http://localhost:3000/activities.json
@@ -14,15 +14,15 @@ Content-Type: application/json
 }
 
 ### Activity Update
-PATCH http://localhost:3000/activities/3.json
+PATCH http://localhost:3000/activities/15.json
 Content-Type: application/json
 
 {
-  "name": "hike with a dog"
+  "name": "cry myself to sleep"
 }
 
 ### Activity Destroy
-DELETE http://localhost:3000/activities/10.json
+DELETE http://localhost:3000/activities/15.json
 
 ######################################
 ### Did_It Index
@@ -35,11 +35,11 @@ Content-Type: application/json
 {
   "user_id": "1",
   "activity_id": "8",
-  "date": "2022-10-11",
+  "date": "2022-10-11"
 }
 
 ### Did_It Destroy
-DELETE http://localhost:3000/did_its/1.json
+DELETE http://localhost:3000/did_its/15.json
 
 ######################################
 ### User Create
