@@ -10,7 +10,8 @@ POST http://localhost:3000/activities.json
 Content-Type: application/json
 
 {
-  "name": "hike with dog"
+  "name": "hike with dog",
+  "user_id": "5"
 }
 
 ### Activity Update

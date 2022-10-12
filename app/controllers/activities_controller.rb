@@ -14,6 +14,7 @@ class ActivitiesController < ApplicationController
   def create
     activity = Activity.new(
       name: params["name"],
+      user_id: params["user_id"],
     )
     if activity.save
       render json: activity.as_json
@@ -25,6 +26,7 @@ class ActivitiesController < ApplicationController
   def update
     activity = Activity.find_by(id: params["id"])
     activity.name = params["name"] || activity.name
+    activity.user_id = params["user_id"] || activity.user_id
     if activity.save
       render json: activity.as_json
     else
