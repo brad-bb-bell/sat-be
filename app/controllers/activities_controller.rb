@@ -2,13 +2,13 @@ class ActivitiesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    activities = Activity.all
-    render json: activities.as_json
+    @activities = Activity.all
+    render template: "activities/index"
   end
 
   def show
-    activity = Activity.find_by(id: params["id"])
-    render json: activity.as_json
+    @activity = Activity.find_by(id: params["id"])
+    render template: "activities/show"
   end
 
   def create

@@ -1,0 +1,16 @@
+{
+  id: @user.id,
+  created_at: @user.created_at,
+  updated_at: @user.updated_at,
+  name: @user.name,
+  activities: @user.activities.map do |activity|
+    activity.name
+  end,
+  did_its: @user.did_its.map do |did_it|
+  {
+    id: did_it.id,
+    name: did_it.activity.name,
+    date: did_it.date
+  }
+  end
+}

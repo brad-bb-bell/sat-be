@@ -2,8 +2,13 @@ class DidItsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    did_its = DidIt.all
-    render json: did_its.as_json
+    @did_its = DidIt.all
+    render template: "did_its/index"
+  end
+
+  def show
+    @did_it = DidIt.find_by(id: params["id"])
+    render template: "did_its/show"
   end
 
   def create

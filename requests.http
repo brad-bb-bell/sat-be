@@ -29,6 +29,9 @@ DELETE http://localhost:3000/activities/15.json
 ### Did_It Index
 GET http://localhost:3000/did_its.json
 
+### Did_It Show
+GET http://localhost:3000/did_its/1.json
+
 ### Did_It Create
 POST http://localhost:3000/did_its.json
 Content-Type: application/json
@@ -43,6 +46,9 @@ Content-Type: application/json
 DELETE http://localhost:3000/did_its/16.json
 
 ######################################
+### User Show
+GET http://localhost:3000/users/1.json
+
 ### User Create
 POST http://localhost:3000/users.json
 Content-Type: application/json
