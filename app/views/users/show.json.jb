@@ -3,6 +3,7 @@
   created_at: @user.created_at,
   updated_at: @user.updated_at,
   name: @user.name,
+  email: @user.email,
   activities: @user.activities.map do |activity|
     activity.name
   end,

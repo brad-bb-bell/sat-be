@@ -54,8 +54,10 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "BB",
-  "email": "brad.bb.bell@gmail.com"
+  "name": "Test",
+  "email": "test@gmail.com",
+  "password": "password",
+  "password_confirmation": "password"
 }
 
 ### User Update
@@ -68,3 +70,12 @@ Content-Type: application/json
 
 ### User destroy
 DELETE http://localhost:3000/users/5.json
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "brad.bb.bell@gmail.com",
+  "password": "password"
+}

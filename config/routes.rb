@@ -6,6 +6,9 @@ post "/users" => "users#create"
 patch "/users/:id" => "users#update"
 delete "/users/:id" => "users#destroy"
 
+### Sessions routes
+post "/sessions" => "sessions#create"
+
 ### Activity routes
 get "/activities" => "activities#index"
 get "/activities/:id" => "activities#show"
