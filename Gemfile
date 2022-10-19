@@ -73,3 +73,4 @@ group :test do
 end
 
 gem 'jwt'
+gem 'rack-cors', '~> 1.1', '>= 1.1.1'

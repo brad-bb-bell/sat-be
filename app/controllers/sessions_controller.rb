@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  
+
   def create
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         Rails.application.credentials.fetch(:secret_key_base), # the secret key
         "HS256" # the encryption algorithm
       )
-      render json: { jwt: jwt, email: user.email, user_id: user.id }, status: :created
+      render json: { jwt: jwt, user_id: user.id, name: user.name, email: user.email,  }, status: :created
     else
       render json: {}, status: :unauthorized
     end
