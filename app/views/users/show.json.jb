@@ -5,7 +5,10 @@
   name: @user.name,
   email: @user.email,
   activities: @user.activities.map do |activity|
-    activity.name
+  {
+    id: activity.id,
+    name: activity.name
+  }
   end,
   did_its: @user.did_its.map do |did_it|
   {

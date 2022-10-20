@@ -10,8 +10,8 @@ POST http://localhost:3000/activities.json
 Content-Type: application/json
 
 {
-  "name": "hike with dog",
-  "user_id": "5"
+  "name": "code",
+  "user_id": "1"
 }
 
 ### Activity Update
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### Activity Destroy
-DELETE http://localhost:3000/activities/15.json
+DELETE http://localhost:3000/activities/10.json
 
 ######################################
 ### Did_It Index
