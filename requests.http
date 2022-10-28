@@ -15,11 +15,11 @@ Content-Type: application/json
 }
 
 ### Activity Update
-PATCH http://localhost:3000/activities/15.json
+PATCH http://localhost:3000/activities/8.json
 Content-Type: application/json
 
 {
-  "name": "cry myself to sleep"
+  "selected": "true"
 }
 
 ### Activity Destroy
@@ -30,7 +30,7 @@ DELETE http://localhost:3000/activities/10.json
 GET http://localhost:3000/did_its.json
 
 ### Did_It Show
-GET http://localhost:3000/did_its/1.json
+GET http://localhost:3000/did_its/5.json
 
 ### Did_It Create
 POST http://localhost:3000/did_its.json

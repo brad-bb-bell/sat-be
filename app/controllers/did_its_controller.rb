@@ -12,13 +12,13 @@ class DidItsController < ApplicationController
   end
 
   def create
-    did_it = DidIt.new(
+    @did_it = DidIt.new(
       user_id: params["user_id"],
       activity_id: params["activity_id"],
       date: params["date"],
     )
-    if did_it.save
-      render json: did_it.as_json
+    if @did_it.save
+      render template: "did_its/show"
     else
       render json: { errors: did_it.errors.full_messages }, status: :unprocessable_entity
     end

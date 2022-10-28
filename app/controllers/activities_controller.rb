@@ -27,6 +27,7 @@ class ActivitiesController < ApplicationController
     activity = Activity.find_by(id: params["id"])
     activity.name = params["name"] || activity.name
     activity.user_id = params["user_id"] || activity.user_id
+    activity.selected = params["selected"] || activity.selected
     if activity.save
       render json: activity.as_json
     else

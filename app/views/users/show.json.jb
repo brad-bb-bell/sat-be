@@ -7,7 +7,8 @@
   activities: @user.activities.map do |activity|
   {
     id: activity.id,
-    name: activity.name
+    name: activity.name,
+    selected: activity.selected
   }
   end,
   did_its: @user.did_its.map do |did_it|

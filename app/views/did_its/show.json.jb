@@ -1,6 +1,6 @@
 {
   id: @did_it.id,
   user: @did_it.user.name,
-  activity: @did_it.activity.name,
+  name: @did_it.activity.name,
   date: @did_it.date
 }
