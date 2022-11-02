@@ -43,7 +43,7 @@ Content-Type: application/json
 }
 
 ### Did_It Destroy
-DELETE http://localhost:3000/did_its/16.json
+DELETE http://localhost:3000/did_its/35.json
 
 ######################################
 ### User Show
