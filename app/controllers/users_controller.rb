@@ -24,6 +24,7 @@ class UsersController < ApplicationController
     user = User.find_by(id: params["id"])
     user.name = params["name"] || user.name
     user.email = params["email"] || user.email
+    user.streak = params["streak"] || user.streak
     if user.save
       render json: user.as_json
     else

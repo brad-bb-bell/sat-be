@@ -4,6 +4,7 @@
   updated_at: @user.updated_at,
   name: @user.name,
   email: @user.email,
+  streak: @user.streak,
   activities: @user.activities.map do |activity|
   {
     id: activity.id,

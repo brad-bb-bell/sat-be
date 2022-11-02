@@ -61,11 +61,11 @@ Content-Type: application/json
 }
 
 ### User Update
-PATCH http://localhost:3000/users/5.json
+PATCH http://localhost:3000/users/1.json
 Content-Type: application/json
 
 {
-  "name": "BallinBB"
+  "streak": 1
 }
 
 ### User destroy
