@@ -13,6 +13,7 @@ User.create!(name: "Squishy", email: "olive@test.com", password: "password", pas
 Activity.create!(name: "yoga", user_id: 1)
 Activity.create!(name: "hike the M", user_id: 1)
 Activity.create!(name: "skateboard", user_id: 1)
+Activity.create!(name: "backcountry ski", user_id: 1)
 
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-09-27")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-09-28")
@@ -30,6 +31,8 @@ DidIt.create!(user_id: 1, activity_id: 1, date: "2022-10-27")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-10-31")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-01")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-02")
+DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-03")
+DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-04")
 
 DidIt.create!(user_id: 1, activity_id: 2, date: "2022-10-05")
 DidIt.create!(user_id: 1, activity_id: 2, date: "2022-10-16")
@@ -38,3 +41,5 @@ DidIt.create!(user_id: 1, activity_id: 2, date: "2022-10-28")
 DidIt.create!(user_id: 1, activity_id: 2, date: "2022-11-01")
 
 DidIt.create!(user_id: 1, activity_id: 3, date: "2022-10-07")
+
+DidIt.create!(user_id: 1, activity_id: 4, date: "2022-11-07")
