@@ -42,6 +42,7 @@ DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-16")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-21")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-22")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-28")
+DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-29")
 
 DidIt.create!(user_id: 1, activity_id: 2, date: "2022-10-05")
 DidIt.create!(user_id: 1, activity_id: 2, date: "2022-10-16")
