@@ -45,6 +45,7 @@ DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-28")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-29")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-11-30")
 DidIt.create!(user_id: 1, activity_id: 1, date: "2022-12-01")
+DidIt.create!(user_id: 1, activity_id: 1, date: "2022-12-05")
 
 DidIt.create!(user_id: 1, activity_id: 2, date: "2022-10-05")
 DidIt.create!(user_id: 1, activity_id: 2, date: "2022-10-16")
@@ -61,3 +62,4 @@ DidIt.create!(user_id: 1, activity_id: 4, date: "2022-11-13")
 DidIt.create!(user_id: 1, activity_id: 4, date: "2022-11-26")
 
 DidIt.create!(user_id: 1, activity_id: 5, date: "2022-11-24")
+DidIt.create!(user_id: 1, activity_id: 5, date: "2022-12-03")
